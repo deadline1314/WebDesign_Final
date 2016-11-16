@@ -1,0 +1,55 @@
+/*Main District*/
+.main{
+    background-image: url("../pic/header.jpg");
+    height: 500px;
+    -webkit-filter: grayscale(20%);
+    filter:grayscale(20%);
+}
+.main-words{
+    background-color: grey;
+    margin: 90px 0;
+    color: white;
+}
+
+h1.title-words{
+    font-size: 80px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+hr.star-primary{
+    padding:0;
+    border-top:solid 5px;
+    text-align:center;
+    max-width:250px;
+    margin:15px auto 30px;
+    border-color:black;
+}
+hr.star-primary:after{
+    content:"\f005";
+    font-family:FontAwesome;
+    display:inline-block;
+    position:relative;
+    top:-.8em;
+    font-size:2em;
+    padding:0 .25em;
+    background-color:#fff;
+    color:black;
+}
+
+/*interests*/
+#interests{
+    padding-top:6em;
+}
+#interests figcaption a{
+    border:1px solid #fff;
+    margin-top: 1em;
+    display: inline-block;
+    color: #fff;
+    padding: 0 2em;
+}
+#interests figcaption a:hover{
+    text-decoration: none;
+    padding: 0 3em;
+}
+

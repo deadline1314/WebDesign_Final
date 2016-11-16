@@ -1,0 +1,11 @@
+/**
+ * Created by Ruotian on 11/14/2016.
+ */
+var modal = document.getElementById('login');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
