@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/Main.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
     <link href="css/set.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 </head>
@@ -28,13 +29,41 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                <li><a><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <!--Navigation End-->
+
+<!--Model-->
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="pic/login.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+<!--Model End-->
 
 <!--Main District-->
 <div class="jumbotron container-fluid text-center main">
@@ -61,7 +90,7 @@
         <figcaption>
             <h2>Sports</h2>
             <p>Total Group Number: 5<br>
-                <a href="#" title="pic-sport" id="sportTag" data-gallery>View more</a></p>
+                <a href="sport.html" title="pic-sport" id="sportTag" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar fadeIn" id="pic-food">
@@ -69,7 +98,7 @@
         <figcaption>
             <h2>Food</h2>
             <p>Total Group Number: 5<br>
-                <a href="#" title="pic-food" id="foodTag" data-gallery>View more</a></p>
+                <a href="food.html" title="pic-food" id="foodTag" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar fadeIn" id="pic-talk">
@@ -77,17 +106,15 @@
         <figcaption>
             <h2>Tech Talk</h2>
             <p>Total Group Number: 5<br>
-                <a href="#" title="pic-talk" id="talkTag" data-gallery>View more</a></p>
+                <a href="talk.html" title="pic-talk" id="talkTag" data-gallery>View more</a></p>
         </figcaption>
     </figure>
 </div>
 <!--Interest End-->
 <!--Main End-->
 
-<!--Instruction District-->
-
-<!--Instruction End-->
 <script src="js/main.js"></script>
 <script src="js/replace.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

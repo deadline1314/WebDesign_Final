@@ -37,7 +37,7 @@ hr.star-primary:after{
     color:black;
 }
 
-/*interests*/
+/*Interests*/
 #interests{
     padding-top:6em;
 }
@@ -52,4 +52,6 @@ hr.star-primary:after{
     text-decoration: none;
     padding: 0 3em;
 }
+
+/*Introduction*/
 
