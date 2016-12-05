@@ -89,11 +89,11 @@ hr.star-primary:after{
     background-size: cover;
 }
 
-/**/
+/*Instruction Part*/
 section h2.section-heading{
     font-size:40px;
     margin-top:0;
-    margin-bottom:15px
+    margin-bottom:15px;
 }
 section h3.section-subheading{
     font-size:16px;
@@ -107,25 +107,27 @@ section h3.section-subheading{
     }
 }
 
+/*default style for the timeline design*/
 .timeline {
     list-style: none;
-    padding: 0;
+    padding: 30px;
     position: relative;
 }
 .timeline:before {
-    top: 0;
+    top: 30px;
     bottom: 0;
     position: absolute;
     content: "";
     width: 2px;
     background-color: #f1f1f1;
-    left: 40px;
+    /*adjust the position of the timeline*/
+    left: 60px;
     margin-left: -1.5px;
 }
 .timeline > li {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     position: relative;
-    min-height: 50px;
+    min-height: 60px;
 }
 .timeline > li:before,
 .timeline > li:after {
@@ -135,10 +137,12 @@ section h3.section-subheading{
 .timeline > li:after {
     clear: both;
 }
+
+/*adjust the word style in the odd position*/
 .timeline > li .timeline-panel {
     width: 100%;
     float: right;
-    padding: 0 20px 0 100px;
+    padding: 20px 20px 0 140px;
     position: relative;
     text-align: left;
 }
@@ -154,11 +158,13 @@ section h3.section-subheading{
     left: -14px;
     right: auto;
 }
+
+/*image style design*/
 .timeline > li .timeline-image {
-    left: 0;
-    margin-left: 0;
-    width: 100px;
-    height: 100px;
+    left: 60px;
+    margin-left: -100px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     z-index: 100;
     background-color: white;
@@ -167,16 +173,20 @@ section h3.section-subheading{
     border: 7px solid #cccccc;
     text-align: center;
 }
-.timeline > li .timeline-image h4 {
-    font-size: 10px;
-    margin-top: 12px;
-    line-height: 14px;
+/*words' style in the last cycle*/
+.timeline > li .timeline-image h1 {
+    font-size: 17px;
+    margin-top: 33px;
+    line-height: 16px;
 }
+
+/*adjust the words position in the even position*/
 .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
     text-align: left;
-    padding: 0 20px 0 100px;
+    padding: 20px 20px 0 140px;
 }
+
 .timeline > li.timeline-inverted > .timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
@@ -189,20 +199,18 @@ section h3.section-subheading{
     left: -14px;
     right: auto;
 }
+
 .timeline > li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 100px;
 }
-.timeline .timeline-heading h4 {
-    margin-top: 0;
-    color: inherit;
-}
-.timeline .timeline-heading h4.subheading {
-    text-transform: none;
-}
+
 .timeline .timeline-body > p,
 .timeline .timeline-body > ul {
     margin-bottom: 0;
 }
+
+
+/*screen size > 768px*/
 @media (min-width: 768px) {
     .timeline:before {
         left: 50%;
@@ -214,64 +222,81 @@ section h3.section-subheading{
     .timeline > li .timeline-panel {
         width: 41%;
         float: left;
-        padding: 0 20px 20px 30px;
+        padding: 30px 40px 20px 10px;
         text-align: right;
     }
     .timeline > li .timeline-image {
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 160px;
         left: 50%;
-        margin-left: -50px;
+        margin-left: -80px;
     }
-    .timeline > li .timeline-image h4 {
-        font-size: 13px;
-        margin-top: 16px;
-        line-height: 18px;
+    .timeline > li .timeline-image h1 {
+        font-size: 20px;
+        margin-top: 40px;
+        line-height: 20px;
     }
     .timeline > li.timeline-inverted > .timeline-panel {
         float: right;
         text-align: left;
-        padding: 0 30px 20px 20px;
+        padding: 30px 40px 20px 50px;
     }
 }
+
+/*screen size > 992px*/
 @media (min-width: 992px) {
     .timeline > li {
         min-height: 150px;
     }
     .timeline > li .timeline-panel {
-        padding: 0 20px 20px;
+        padding: 50px 50px 20px 10px;
     }
     .timeline > li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
     }
-    .timeline > li .timeline-image h4 {
-        font-size: 18px;
-        margin-top: 30px;
+    .timeline > li .timeline-image h1 {
+        font-size: 26px;
+        margin-top: 50px;
         line-height: 26px;
     }
     .timeline > li.timeline-inverted > .timeline-panel {
-        padding: 0 20px 20px;
+        padding: 50px 50px 20px 55px;
     }
 }
+
+/*screen size > 1200px*/
 @media (min-width: 1200px) {
     .timeline > li {
-        min-height: 170px;
+        /*length of the connection line*/
+        min-height: 300px;
     }
     .timeline > li .timeline-panel {
-        padding: 0 20px 20px 100px;
+        /*words on the left side*/
+        padding: 100px 120px 20px 100px;
     }
     .timeline > li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
+        /*adjust the size of the pic*/
+        background-color: beige;
+        width: 300px;
+        height: 300px;
+        /*adjust the position to the left side*/
+        margin-left: -150px;
     }
-    .timeline > li .timeline-image h4 {
-        margin-top: 40px;
+    .timeline > li .timeline-image h1 {
+        /*the word in the last cycle*/
+        font-size: 30px;
+        margin-top: 90px;
+        font-weight: 900;
+        line-height: 36px;
     }
     .timeline > li.timeline-inverted > .timeline-panel {
-        padding: 0 100px 20px 20px;
+        /*represent the length of this four lines*/
+        padding: 100px 100px 20px 120px;
+    }
+    .enlargeFont {
+        font-size: 80px;
     }
 }
 
@@ -287,7 +312,7 @@ section h3.section-subheading{
 {
     padding:5% 1.5em;
     transform-origin:center bottom;
-    background:#606060;
+    background:#424242;
     color:#b0b0b0;
 }
 

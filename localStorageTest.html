@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS-Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="LocalStorageTest_AJ.js"></script>
+
+<div ng-app="Test" ng-controller="myCtrl">
+    EventName: <input ng-model="record_name"><br>
+    EventTime: <input ng-model="record_time"><br>
+    EventDesc: <input ng-model="record_description"><br>
+    EventLoc:  <input ng-model="record_location"><br>
+    EventImg:  <input ng-model="record_imgPath"><br>
+    <button ng-click="addItem()">Add</button>
+    <p>{{errortext}}</p>
+    <div ng-repeat="x in initData">{{x}}<span ng-click="removeItem($index)">×</span></div>
+
+</div>
+
+</body>
+</html>
