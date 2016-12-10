@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <link href="css/jumpCSS.css" rel="stylesheet" type="text/css">
+    <title>Auto Jump</title>
+    <script type="text/javascript">
+        function countDown(secs,surl){
+            //alert(surl);
+            var jumpTo = document.getElementById('jumpTo');
+            jumpTo.innerHTML=secs;
+            if(--secs>0){
+                setTimeout("countDown("+secs+",'"+surl+"')",1000);
+            }
+            else
+            {
+                location.href=surl;
+            }
+        }
+    </script>
+</head>
+<body><h1 style="text-align: center">Please wait for <span id="jumpTo">5</span> seconds to auto-jump.</h1>
+<script type="text/javascript">
+    countDown(5,'about.html');
+</script>
+
+<div class="foreground"></div>
+
+<div class="midground">
+    <div class="tuna"></div>
+</div>
+
+<div class="background">
+</div>
+</body>
+</html>

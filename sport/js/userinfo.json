@@ -1,0 +1,5 @@
+[
+{"Id": 0, "Name": "Food", "Description": "ZSeaFood", "Location": "Seattle", "Img": "img/04-large.jpg", "Fav": 0},
+{"Id": 1, "Name": "Sport", "Description": "Soccer", "Location": "Bellvue", "Img": "img/05-large.jpg", "Fav": 0},
+{"Id": 2, "Name": "Enterntainment", "Description": "Movie", "Location": "Redmond", "Img": "img/08-large.jpg", "Fav": 0}
+]

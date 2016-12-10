@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>bigfeet</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+		<link href="../css/login.css" rel="stylesheet" type="text/css">
+		<link href="css/bigfeet.css" type="text/css" rel="stylesheet" />
+		<script>
+			$(function() {
+				$.scrollUp();
+			});
+		</script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#myPage"><img src="../pic/logo.png" alt="logo" style="height: 30px"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+							<span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="id01" class="modal">
+
+			<form class="modal-content animate" action="action_page.php">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<img src="../pic/login.png" alt="Avatar" class="avatar">
+				</div>
+
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="#">password?</a></span>
+		</div>
+		</form>
+		</div>
+		<!-- 代码 开始 -->
+		<div class="banner">
+			<div class="banner_show" id="banner_show">
+				<a href="javascript:;" target="_blank" class="bannger_inbox"><img src="images/banner.jpg" width="1700" height="639"></a>
+				<a href="javascript:;" target="_blank" class="bannger_inbox"><img src="images/banner1.jpg" width="1700" height="639"></a>
+				<div class="banner_pre_next">
+					<a href="javascript:;" class="banner_btn_left">上一个</a>
+					<a href="javascript:;" class="banner_btn_right">下一个</a>
+				</div>
+			</div>
+			<!--搜索部分-->
+			<div class="focus-news">
+				<p><img src="images/feet_pic2.png" width="388" height="104" /></p>
+				<div class="search clearfloat">
+					<input id="gaoliang_search" onblur="if(this.value==''){this.value='What are you looking for?';this.style.color='#becbd1'}" onfocus="if(this.value=='What are you looking for?'){this.value='';this.style.color='#becbd1'}" value="What are you looking for?" name="q">
+					<button onclick="search();"></button>
+				</div>
+			</div>
+			<!--搜索部分end-->
+		</div>
+		<!-- 代码 结束 -->
+		<div class="content clearfloat">
+			<div class="bigbt clearfloat">
+				<h3 class="fl">THE</h3>
+				<div class="paixu_fl fr">
+					<a onclick="up('name');" >Name</a>
+					<a onclick="up('description');">Description</a>
+					<a onclick="up('location');">Location</a>
+					<a onclick="up('fav');">Favorite</a>
+				</div>
+			</div>
+			<div class="addel">
+				<div class="form-group target">
+					<div class="big_the">
+						<a href="javascritp:;"><img src="images/feet_pic4.jpg" width="265" height="208" /></a>
+						<div class="the_right">
+							<h3>FOOD</h3>
+							<span class="P_1">new York City</span>
+							<p class="p_2"><b>The</b> kitchen cupboard was stocked with tins of soup and food.</p>
+							<p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><a class="zhan"><span>888</span></a></p>
+						</div>
+					</div>
+					<span class="input-group-btn">
+						<input value="FOOD" type="hidden">
+						<button type="button" class="btn btn-danger addel-delete">x </button>
+                    </span>
+				</div>
+				<div class="form-group target">
+					<div class="big_the">
+						<a href="javascritp:;"><img src="images/feet_pic5.jpg" width="265" height="208" /></a>
+						<div class="the_right">
+							<h3>ENTERNTAINMENT</h3>
+							<span class="P_1">Redmond City</span>
+							<p class="p_2">Brave Heart, <b>the</b> winner of Oscar Prize, is about <b>the</b> war between England and Scotland.</p>
+							<p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><a class="zhan"><span>157</span></a></p>
+						</div>
+					</div>
+
+					<span class="input-group-btn">
+					<input value="ENTERNTAINMENT" type="hidden">
+						<button type="button" class="btn btn-danger addel-delete">x </button>
+                    </span>
+				</div>
+				<div class="form-group target">
+					<div class="big_the">
+						<a href="javascritp:;"><img src="images/feet_pic6.jpg" width="265" height="208" /></a>
+						<div class="the_right">
+							<h3>SPORT</h3>
+							<span class="P_1">Redmond City</span>
+							<p class="p_2">I had at last found a sport where I could compete on equal terms with able-bodied people.</p>
+							<p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><a class="zhan"><span>346</span></a></p>
+						</div>
+					</div>
+
+					<span class="input-group-btn">
+					<input value="SPORT" type="hidden">
+						<button type="button" class="btn btn-danger addel-delete">x </button>
+                    </span>
+				</div>
+				<div class="form-group target">
+
+					<div class="big_the">
+						<a href="javascritp:;"><img src="images/feet_pic8.jpg" width="265" height="208" /></a>
+						<div class="the_right">
+							<h3>TOURISM</h3>
+							<span class="P_1">Redmond City</span>
+							<p class="p_2">Tourism, which is a major source of income for <b>the</b> city, may be seriously affected.</p>
+							<p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><a class="zhan"><span>564</span></a></p>
+						</div>
+					</div>
+
+					<span class="input-group-btn">
+					<input value="TOURISM" type="hidden">
+						<button type="button" class="btn btn-danger addel-delete">x </button>
+                    </span>
+				</div>
+
+			</div>
+
+			<!--新增点击之后-->
+			<div class="big_the2" id="big_the2">
+            	<a href="javascript:;" class="a_1" onclick="tijiao();">submit</a>
+
+				<div class="half">
+					<div class="uploader blue">
+						<a class="license"><img id="img-1" src="images/feet_pic11.jpg" width="265" height="208" /> </a>
+						<input id="file0" class="file-3" type="file" size="30" onchange="javascript:setImagePreview();" accept="image/*" capture="camera" />
+					</div>
+					<div class="yulan"> <img src="" id="img0">
+						<div class="enter">
+							<button class="btn-2 fl">取消</button>
+							<button class="btn-3 fr">确定</button>
+						</div>
+					</div>
+
+					<!-- <p>营业执照</p>-->
+				</div>
+
+				<div class="the_right">
+					<h3>
+        <input id="name" onblur="if(this.value==''){this.value='NAME';this.style.color='#a1a1a1'}" onfocus="if(this.value=='NAME'){this.value='';this.style.color='#a1a1a1'}" value="NAME" name="q" style="color:#a1a1a1">
+      </h3>
+					<span>
+      <input
+      id="location" onblur="if(this.value==''){this.value='LOCATION';this.style.color='#a1a1a1'}" onfocus="if(this.value=='LOCATION'){this.value='';this.style.color='#a1a1a1'}" value="LOCATION" name="q" style="color:#a1a1a1;">
+      </span>
+			<span>
+      <input id="description" onblur="if(this.value==''){this.value='Description';this.style.color='#a1a1a1'}" onfocus="if(this.value=='Description'){this.value='';this.style.color='#a1a1a1'}" value="Description" name="q" style="color:#a1a1a1;">
+      </span>
+				</div>
+			</div>
+			<!--新增点击之后-->
+
+		</div>
+		<div class="footer">
+			<p>Made by Ruotian. All Right Reserved.</p>
+		</div>
+		<div class="scroll" id="scroll"> 回到顶部 </div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/focus.js"></script>
+		<script type="text/javascript" src="js/top.js"></script>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript">
+
+		var lStorage = window.localStorage;
+		var $jsontip = $('.addel');
+		var strHtml ='';
+		var nowHtml ='';
+		var insert_img='';
+		var insert_name='';
+		var insert_description='';
+		var insert_fav='';
+		//$jsontip.empty();//清空内容
+
+		var str=[
+			{Id: 1, Name: "Food", Description: "The kitchen cupboard was stocked with tins of soup and food.", Location: "new York City", Img: "images/feet_pic4.jpg", Fav: 888},
+			{Id: 2, Name: "ENTERNTAINMENT", Description: "Brave Heart, the winner of Oscar Prize, is about the war between England and Scotland.", Location: "Redmond City", Img: "images/feet_pic5.jpg", "Fav": 157},
+			{Id: 3, Name: "SPORT", Description: "I had at last found a sport where I could compete on equal terms with able-bodied people.", Location: "Redmond City", Img: "images/feet_pic6.jpg", Fav: 346},
+			{Id: 4, Name: "TOURISM", Description: "Tourism, which is a major source of income for the city, may be seriously affected.", Location: "Redmond City", Img: "images/feet_pic8.jpg", Fav: 564}
+		] ;
+		
+
+		//排序并显示
+		function up(type_name){
+
+			strHtml ='';
+			if(type_name=='name'){
+				str.sort(name_up);
+			}
+			if(type_name=='description'){
+				str.sort(description_up);
+			}
+			if(type_name=='location'){
+				str.sort(location_up);
+			}
+			if(type_name=='fav'){
+				str.sort(fav_up);
+			}
+			var i=0;
+			$.each(str,function(infoIndex,info){
+				if(str[i]!=''){
+			        				strHtml += '<div class="form-group target"><div class="big_the"><a href="javascritp:;"><img src="'+info['Img']+'" width="265" height="208" /></a><div class="the_right"><h3>'+info['Name']+'</h3><span class="P_1">'+info['Location']+'</span><p class="p_2">'+info['Description']+'</p><p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><span class="span_3"></span><a class="zhan"><span>'+info['Fav']+'</span></a></p></div></div><span class="input-group-btn"><input value="'+info['Name']+'" type="hidden"><button type="button" class="btn btn-danger addel-delete">x </button></span></div>';
+			        			}
+			        			i++;
+			});
+
+			$jsontip.html(strHtml);//显示处理后的数据
+			bindClick();			
+		}
+
+		function name_up(x, y) {
+            return (x.Name > y.Name) ? 1 : -1
+ 
+        }
+        function description_up(x, y) {
+            return (x.Description > y.Description) ? 1 : -1
+ 
+        }
+        function location_up(x, y) {
+            return (x.Location > y.Location) ? 1 : -1
+ 
+        }
+        function fav_up(x, y) {
+            return (x.Fav > y.Fav) ? 1 : -1
+ 
+        }
+        //内容新增
+        function tijiao(){
+        	strHtml='';
+        	str.push({Id: 1, Name: $("#name").val(), Description: $("#description").val(), Location: $("#location").val(), Img: insert_img, Fav: 168});
+        	var i=0;
+        	$.each(str,function(infoIndex,info){
+				if(str[i]!=''){
+			        				strHtml += '<div class="form-group target"><div class="big_the"><a href="javascritp:;"><img src="'+info['Img']+'" width="265" height="208" /></a><div class="the_right"><h3>'+info['Name']+'</h3><span class="P_1">'+info['Location']+'</span><p class="p_2">'+info['Description']+'</p><p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><span class="span_3"></span><a class="zhan"><span>'+info['Fav']+'</span></a></p></div></div><span class="input-group-btn"><input value="'+info['Name']+'" type="hidden"><button type="button" class="btn btn-danger addel-delete">x </button></span></div>';
+			        			}
+			        			i++;
+			});
+			$jsontip.html(strHtml);//显示处理后的数据
+			bindClick();
+        }
+        //搜索
+        function search(){
+        	strHtml ='';
+        	var search_val=$("#gaoliang_search").val();
+        	var search_replace='<b>'+search_val+'</b>';
+        	var i=0;
+        	$.each(str,function(infoIndex,info){
+        		if(info['Description'].indexOf(search_val)>0){
+        			info['Description']=info['Description'].replace(search_val, search_replace);
+        			if(str[i]!=''){
+			        				strHtml += '<div class="form-group target"><div class="big_the"><a href="javascritp:;"><img src="'+info['Img']+'" width="265" height="208" /></a><div class="the_right"><h3>'+info['Name']+'</h3><span class="P_1">'+info['Location']+'</span><p class="p_2">'+info['Description']+'</p><p class="p_3"><span class="span_1"></span><span class="span_2">2683</span><span class="span_3"></span><a class="zhan"><span>'+info['Fav']+'</span></a></p></div></div><span class="input-group-btn"><input value="'+info['Name']+'" type="hidden"><button type="button" class="btn btn-danger addel-delete">x </button></span></div>';
+			        			}
+			        			i++;
+        		}
+			});
+			$jsontip.html(strHtml);//显示处理后的数据
+			bindClick();
+        }
+		//回到顶部
+			$(function() {
+				showScroll();
+
+				function showScroll() {
+					$(window).scroll(function() {
+						var scrollValue = $(window).scrollTop();
+						scrollValue > 100 ? $('div[class=scroll]').fadeIn() : $('div[class=scroll]').fadeOut();
+					});
+					$('#scroll').click(function() {
+						$("html,body").animate({
+							scrollTop: 0
+						}, 200);
+					});
+				}
+			})
+
+
+		</script>
+		<script src="js/addel.jquery.js"></script>
+		<script>
+		//删除
+			$(document).ready(function() {
+				$('.addel').addel({
+					classes: {
+						target: 'target'
+					},
+					animation: {
+						duration: 300
+					}
+				}).on('addel:delete', function(event) {
+					if(!window.confirm('Are you absolutely positive you would like to delete: ' + '"' + event.target.find(':input').val() + '"?')) {
+						event.preventDefault();
+					}else{
+						
+					}
+				});
+			});
+		</script>
+       
+		<script>
+		//图片上传
+			$("#file0").change(function() {
+				var objUrl = getObjectURL(this.files[0]);
+				obUrl = objUrl;
+				console.log("objUrl = " + objUrl);
+				if(objUrl) {
+					$("#img0").attr("src", objUrl).show();
+					insert_img=objUrl;
+				} else {
+					$("#img0").hide();
+				}
+			});
+
+			function qd() {
+				var objUrl = getObjectURL(this.files[0]);
+				obUrl = objUrl;
+				console.log("objUrl = " + objUrl);
+				if(objUrl) {
+					$("#img0").attr("src", objUrl).show();
+				} else {
+					$("#img0").hide();
+				}
+			}
+
+			function getObjectURL(file) {
+				var url = null;
+				if(window.createObjectURL != undefined) { // basic
+					url = window.createObjectURL(file);
+				} else if(window.URL != undefined) { // mozilla(firefox)
+					url = window.URL.createObjectURL(file);
+				} else if(window.webkitURL != undefined) { // webkit or chrome
+					url = window.webkitURL.createObjectURL(file);
+				}
+				return url;
+			}
+			
+
+		</script>
+		<script type="text/javascript">
+		//图片上传
+			var subUrl = "";
+			$(function() {
+				$(".file-3").bind('change', function() {
+					subUrl = $(this).val()
+					$(".yulan").show();
+					$(".file-3").val("");
+				});
+
+				$(".file-3").each(function() {
+					if($(this).val() == "") {
+						$(this).parents(".uploader").find(".filename").val("");
+					}
+				});
+				$(".btn-3").click(function() {
+					$("#img-1").attr("src", obUrl);
+					$(".yulan").hide();
+					$(".file-3").parents(".uploader").find(".filename").val(subUrl);
+				})
+				$(".btn-2").click(function() {
+					$(".yulan").hide();
+				})
+
+			});
+		</script>
+        <script type="text/javascript">
+		//点赞
+		 <!--
+		  function bindClick(){
+		      $('a.zhan').on('click',function(){			
+		  var left = parseInt($(this).offset().left)+10, top =  parseInt($(this).offset().top)-10, obj=$(this);
+		  $(this).append('<div id="zhan"><b>+1<\/b></\div>');
+		  $('#zhan').css({'position':'absolute','z-index':'1', 'color':'#C30','left':left+'px','top':top+'px'}).animate({top:top-10,left:left+10},'slow',function(){
+		   $(this).fadeIn('fast').remove();
+		   var Num = parseInt(obj.find('span').text());
+			   Num++;
+			obj.find('span').text(Num);
+		  });
+		   
+		   
+		  return false;
+		 });
+		  }
+		  $(document).ready(function(e) {
+			bindClick();
+		  });
+		 //-->
+		</script>
+	</body>
+
+</html>
